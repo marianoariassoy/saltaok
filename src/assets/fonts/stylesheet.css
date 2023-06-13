@@ -1,0 +1,31 @@
+@font-face {
+  font-display: swap;
+  font-family: "Encode Sans Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("EncodeSans-Medium.woff2") format("woff2"), url("EncodeSans-Medium.woff") format("woff"), url("EncodeSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Encode Sans Bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("EncodeSans-Bold.woff2") format("woff2"), url("EncodeSans-Bold.woff") format("woff"), url("EncodeSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Encode Sans SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: url("EncodeSans-SemiBold.woff2") format("woff2"), url("EncodeSans-SemiBold.woff") format("woff"), url("EncodeSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Encode Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("EncodeSans-Regular.woff2") format("woff2"), url("EncodeSans-Regular.woff") format("woff"), url("EncodeSans-Regular.ttf") format("truetype");
+}

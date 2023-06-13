@@ -1,0 +1,23 @@
+header {
+  background-image: url("/images/header-bg.jpg");
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.svg-primary {
+  svg {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      fill: black;
+    }
+  }
+}
+
+.svg-secondary {
+  svg {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      fill: $color-primary;
+    }
+  }
+}

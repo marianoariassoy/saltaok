@@ -1,0 +1,22 @@
+.article-main {
+  aspect-ratio: 4/5;
+}
+
+.article-virales {
+  img {
+    aspect-ratio: 4/7;
+  }
+}
+
+.nav-footer li:last-child {
+  border: 0;
+}
+.nav-footer {
+  li {
+    a {
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
