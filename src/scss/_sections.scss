@@ -5,6 +5,9 @@
 .article-virales {
   img {
     aspect-ratio: 4/7;
+    @media (max-width: 980px) {
+      aspect-ratio: 1;
+    }
   }
 }
 

@@ -111,7 +111,7 @@ header {
 }
 
 #nav-menu > span {
-  background-color: #ffa300;
+  background-color: white;
   display: block;
   height: 1px;
   width: 30px;
@@ -154,6 +154,11 @@ header {
 
 .article-virales img {
   aspect-ratio: 4/7;
+}
+@media (max-width: 980px) {
+  .article-virales img {
+    aspect-ratio: 1;
+  }
 }
 
 .nav-footer li:last-child {

@@ -2,16 +2,21 @@ export const navItems = [
   {
     id: 1,
     name: "actualidad",
-    url: "#",
+    url: "#actualidad",
   },
   {
     id: 2,
     name: "entrevistas",
-    url: "#",
+    url: "#actualidad",
   },
   {
     id: 3,
     name: "virales",
-    url: "#",
+    url: "#virales",
+  },
+  {
+    id: 4,
+    name: "contacto",
+    url: "#contacto",
   },
 ];

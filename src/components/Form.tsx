@@ -79,7 +79,7 @@ const Form = () => {
             {errors.message && <Error />}
           </div>
 
-          <div>{sending ? <BeatLoader /> : <button className="bg-primary rounded-md font-bold px-10 py-2   hover:bg-black">{text["es"].send}</button>}</div>
+          <div>{sending ? <BeatLoader /> : <button className="bg-primary rounded-md font-bold px-10 py-2 hover:text-white hover:bg-black">{text["es"].send}</button>}</div>
         </form>
       )}
     </>

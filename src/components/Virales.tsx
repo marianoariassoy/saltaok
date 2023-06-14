@@ -2,7 +2,7 @@ import ArticleVirales from "./ArticleVirales";
 
 const Virales = () => {
   return (
-    <section className="bg-black">
+    <section className="bg-black" id="virales">
       <div className="container max-w-6xl m-auto px-8 py-20">
         <h1 className="text-2xl mb-8 font-bold">virales</h1>
 

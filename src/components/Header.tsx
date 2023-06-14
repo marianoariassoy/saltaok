@@ -1,17 +1,23 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Social from "./Social";
 import Search from "./Search";
 import Logo from "./Logo";
+import scroll from "../utils/scroll";
 
 const Header = () => {
+  useEffect(() => {
+    scroll();
+  }, []);
+
   return (
-    <div className="container max-w-6xl m-auto flex items-center py-6 px-8">
+    <div className="container max-w-6xl m-auto items-center py-6 px-8 hidden md:flex">
       <div className="flex-grow flex justify-between flex-1">
         <Social />
         <nav>
           <ul className="font-bold">
             <li>
-              <a href="#" className="text-white hover:text-secondary">
+              <a href="#actualidad" className="menu-link">
                 actualidad
               </a>
             </li>
@@ -27,10 +33,14 @@ const Header = () => {
         <nav>
           <ul className="flex gap-12 xl:gap-16 items-center font-bold">
             <li>
-              <a href="#">virales</a>
+              <a href="#virales" className="menu-link">
+                virales
+              </a>
             </li>
             <li>
-              <a href="#">contacto</a>
+              <a href="#contacto" className="menu-link">
+                contacto
+              </a>
             </li>
           </ul>
         </nav>
