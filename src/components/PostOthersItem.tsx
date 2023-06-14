@@ -2,20 +2,25 @@ import ImageComponent from "./ImageComponent";
 import { Link } from "react-router-dom";
 import type { ArticleProps } from "../types/types";
 
-const ArticleVirales = ({ id, title, image }: ArticleProps) => {
+const PostOthersItem = ({ id, title, section, date, image }: ArticleProps) => {
   return (
-    <article className="article-virales">
+    <article>
+      <div className="bg-primary py-1 px-4 font-bold rounded-md text-sm mb-4">{section}</div>
+
       <div className="relative">
         <Link to={`/post/${id}`} className="absolute top-0 w-full h-full flex items-center justify-center hover:backdrop-blur-sm [&>div]:hover:flex">
           <div className="font-bold text-2xl bg-white text-black w-10 h-10 rounded-full items-center justify-center hidden">+</div>
         </Link>
-        <ImageComponent src={image} alt={title} />
+        <div className="aspect-video object-cover overflow-hidden">
+          <ImageComponent src={image} alt={title} />
+        </div>
       </div>
-      <div className="pb-4 pt-2">
-        <h1 className="text-sm">{title}</h1>
+      <div>
+        <h1 className="mt-2 font-bold">{title}</h1>
+        <h2 className="text-sm opacity-60">{date}</h2>
       </div>
     </article>
   );
 };
 
-export default ArticleVirales;
+export default PostOthersItem;

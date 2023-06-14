@@ -3,7 +3,7 @@ import ArticleVirales from "./ArticleVirales";
 const Virales = () => {
   return (
     <section className="bg-black" id="virales">
-      <div className="container max-w-6xl m-auto px-8 py-20">
+      <div className="container max-w-6xl m-auto px-8 pt-20">
         <h1 className="text-2xl mb-8 font-bold">virales</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">

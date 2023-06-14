@@ -2,22 +2,29 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeaderMobile from "../components/HeaderMobile";
 import NavMobile from "../components/NavMobile";
+import Contact from "../components/Contact";
+import Banner from "../components/Banner";
 
 type Props = {
   children: React.ReactNode;
+  home: boolean;
 };
 
-const Layout = ({ children }: Props) => {
+const Layout = ({ children, home }: Props) => {
   return (
     <>
       <header className="fixed z-40 w-full bg-primary shadow-xl">
-        <Header />
+        <Header home={home} />
         <HeaderMobile />
         <NavMobile />
       </header>
-      <main className="mt-40">{children}</main>
+      <main className="mt-40">
+        <Banner />
+        {children}
+        <Contact />
+      </main>
       <footer>
-        <Footer />
+        <Footer home={home} />
       </footer>
     </>
   );

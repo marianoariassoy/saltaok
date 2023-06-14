@@ -6,7 +6,7 @@ type ImageComponentProps = {
   alt: string;
 };
 
-const ImageComponent = ({ src, alt }: ImageComponentProps) => {
+const ImageItem = ({ src, alt }: ImageComponentProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const ImageComponent = ({ src, alt }: ImageComponentProps) => {
     };
   }, [src]);
 
-  return isLoading ? <Loader /> : <img src={src} alt={alt} className="fade-in w-full object-cover h-full" />;
+  return isLoading ? <Loader /> : <img src={src} alt={alt} className="fade-in w-full" />;
 };
 
-export default ImageComponent;
+export default ImageItem;

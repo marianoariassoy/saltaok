@@ -5,7 +5,11 @@ import Search from "./Search";
 import Logo from "./Logo";
 import scroll from "../utils/scroll";
 
-const Header = () => {
+type Props = {
+  home: boolean;
+};
+
+const Header = ({ home }: Props) => {
   useEffect(() => {
     scroll();
   }, []);
@@ -17,25 +21,38 @@ const Header = () => {
         <nav>
           <ul className="font-bold">
             <li>
-              <a href="#actualidad" className="menu-link">
-                actualidad
-              </a>
+              {home === true && (
+                <a href="#actualidad" className="menu-link">
+                  actualidad
+                </a>
+              )}
+              {home === false && <Link to="/#actualidad">actualidad</Link>}
             </li>
           </ul>
         </nav>
       </div>
       <div className="px-16">
-        <Link to="/">
-          <Logo />
-        </Link>
+        {home === true && (
+          <a href="#actualidad" className="menu-link">
+            <Logo />
+          </a>
+        )}
+        {home === false && (
+          <Link to="/">
+            <Logo />
+          </Link>
+        )}
       </div>
       <div className="flex flex-grow flex-1 justify-between items-center gap-12 xl:gap-16">
         <nav>
           <ul className="flex gap-12 xl:gap-16 items-center font-bold">
             <li>
-              <a href="#virales" className="menu-link">
-                virales
-              </a>
+              {home === true && (
+                <a href="#virales" className="menu-link">
+                  virales
+                </a>
+              )}
+              {home === false && <Link to="/#virales">virales</Link>}
             </li>
             <li>
               <a href="#contacto" className="menu-link">
