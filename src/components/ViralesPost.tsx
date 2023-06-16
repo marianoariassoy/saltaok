@@ -2,6 +2,17 @@ import ArticleVirales from "./ArticleVirales";
 import Loader from "./Loader";
 import useFetch from "../hooks/useFetch";
 
+interface Article {
+  id: number;
+  title: string;
+  image: string;
+}
+
+type Props = {
+  data: Article[];
+  loading: boolean;
+};
+
 const ViralesPost = () => {
   const { data, loading } = useFetch(`/virales`) as Props;
 
