@@ -1,9 +1,9 @@
 export type ArticleProps = {
-  id: string;
+  id: number;
   title: string;
+  image: string;
   section?: string;
   date?: string;
-  image: string;
 };
 
 export type DataContact = {

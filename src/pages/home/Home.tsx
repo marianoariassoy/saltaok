@@ -2,6 +2,7 @@ import Layout from "../../layout/Layout";
 import Banner from "../../components/Banner";
 import Posts from "../../components/Posts";
 import Virales from "../../components/Virales";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
@@ -9,6 +10,10 @@ const Home = () => {
       <Posts />
       <Banner />
       <Virales />
+      <Helmet>
+        <title>SaltaOK Comunidad. Contamos historias</title>
+        <meta name="description" content="Somos una comunidad que crea y comunica contenidos de interés general a través de medios tradicionales y digitales de gran alcance." />
+      </Helmet>
     </Layout>
   );
 };

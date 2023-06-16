@@ -8,16 +8,17 @@ type ImageComponentProps = {
 
 const ImageItem = ({ src, alt }: ImageComponentProps) => {
   const [isLoading, setIsLoading] = useState(true);
+  const url = "http://localhost/sites/saltaok-backend/images/";
 
   useEffect(() => {
     const image = new Image();
-    image.src = src;
+    image.src = url + src;
     image.onload = () => {
       setIsLoading(false);
     };
   }, [src]);
 
-  return isLoading ? <Loader /> : <img src={src} alt={alt} className="fade-in w-full" />;
+  return isLoading ? <Loader /> : <img src={url + src} alt={alt} className="fade-in w-full" />;
 };
 
 export default ImageItem;

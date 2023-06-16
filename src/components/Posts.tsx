@@ -1,31 +1,26 @@
 import Article from "./Article";
+import Loader from "./Loader";
+import useFetch from "../hooks/useFetch";
+
+interface Article {
+  id: number;
+  category: string;
+  title: string;
+  date: string;
+  image: string;
+}
+
+type Props = {
+  data: Article[];
+  loading: boolean;
+};
 
 const Posts = () => {
+  const { data, loading } = useFetch(`/noticias`) as Props;
+
   return (
     <section className="bg-black p-2 grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-2" id="actualidad">
-      <Article
-        id="1"
-        section="actualidad"
-        title="Se viene el II Concurso de Locro 
-¿Dónde y cuándo?"
-        date="25/05/2023"
-        image="https://images.pexels.com/photos/894156/pexels-photo-894156.jpeg?auto=compress&cs=tinysrgb&w=1600"
-      />
-
-      <Article id="2" section="entrevista" title="Lorem ipsum dolor sit amet consectetur adipisicing elit" date="25/05/2023" image="https://images.pexels.com/photos/1714354/pexels-photo-1714354.jpeg?auto=compress&cs=tinysrgb&w=1600" />
-
-      <Article
-        id="3"
-        section="actualidad"
-        title="Se viene el II Concurso de Locro 
-¿Dónde y cuándo?"
-        date="25/05/2023"
-        image="https://images.pexels.com/photos/4406759/pexels-photo-4406759.jpeg?auto=compress&cs=tinysrgb&w=1600"
-      />
-
-      <div className="hidden 2xl:block">
-        <Article id="4" section="entrevista" title="Lorem ipsum dolor sit amet consectetur adipisicing elit" date="25/05/2023" image="https://images.pexels.com/photos/2249227/pexels-photo-2249227.jpeg?auto=compress&cs=tinysrgb&w=1600" />
-      </div>
+      {loading ? <Loader /> : data && data.slice(0, 6).map((item) => <Article key={item.id} id={item.id} section={item.category} title={item.title} date={item.date} image={item.image} />)}
     </section>
   );
 };

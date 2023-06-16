@@ -1,40 +1,26 @@
 import PostOthersItem from "./PostOthersItem";
+import Loader from "./Loader";
+import useFetch from "../hooks/useFetch";
+
+interface Article {
+  id: number;
+  category: string;
+  title: string;
+  date: string;
+  image: string;
+}
+
+type Props = {
+  data: Article[];
+  loading: boolean;
+};
 
 const PostOthers = () => {
+  const { data, loading } = useFetch(`/noticias`) as Props;
+
   return (
     <section className="grid md:grid-cols-2 gap-8 border-t border-b py-12">
-      <PostOthersItem
-        id="1"
-        section="actualidad"
-        title="Se viene el II Concurso de Locro 
-¿Dónde y cuándo?"
-        date="25/05/2023"
-        image="https://images.pexels.com/photos/894156/pexels-photo-894156.jpeg?auto=compress&cs=tinysrgb&w=1600"
-      />
-      <PostOthersItem
-        id="1"
-        section="actualidad"
-        title="Se viene el II Concurso de Locro 
-¿Dónde y cuándo?"
-        date="25/05/2023"
-        image="https://images.pexels.com/photos/894156/pexels-photo-894156.jpeg?auto=compress&cs=tinysrgb&w=1600"
-      />
-      <PostOthersItem
-        id="1"
-        section="actualidad"
-        title="Se viene el II Concurso de Locro 
-¿Dónde y cuándo?"
-        date="25/05/2023"
-        image="https://images.pexels.com/photos/894156/pexels-photo-894156.jpeg?auto=compress&cs=tinysrgb&w=1600"
-      />
-      <PostOthersItem
-        id="1"
-        section="actualidad"
-        title="Se viene el II Concurso de Locro 
-¿Dónde y cuándo?"
-        date="25/05/2023"
-        image="https://images.pexels.com/photos/894156/pexels-photo-894156.jpeg?auto=compress&cs=tinysrgb&w=1600"
-      />
+      {loading ? <Loader /> : data && data.slice(0, 4).map((item) => <PostOthersItem key={item.id} id={item.id} section={item.category} title={item.title} date={item.date} image={item.image} />)}
     </section>
   );
 };
