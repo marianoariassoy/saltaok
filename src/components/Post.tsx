@@ -8,6 +8,7 @@ import useFetch from "../hooks/useFetch";
 import Loader from "./Loader";
 import TextHTML from "../hooks/useHTML";
 import { Helmet } from "react-helmet";
+import ShareButton from "./ShareButton";
 
 const Post = () => {
   const { id } = useParams();
@@ -24,7 +25,21 @@ const Post = () => {
           {loading && <Loader />}
           {data && (
             <>
-              {data[0].category && <div className="bg-primary py-3 px-4 font-bold rounded-md text-sm mb-4 w-1/2">{data[0].category}</div>}
+              <Helmet>
+                <title>SaltaOk &bull; {data[0].title}</title>
+                <meta name="description" content={data[0].text} />
+                <meta property="og:title" content={data[0].title} />
+                <meta property="og:url" content={`http://saltaok.com/post/${id}`} />
+                <meta property="og:description" content={data[0].text} />
+                <meta property="og:image" content={`http://saltaok.com/backend/images/${data[0].image}`} />
+              </Helmet>
+
+              <div className="grid grid-cols-2 items-center">
+                <div>{data[0].category && <div className="bg-primary py-3 px-4 font-bold rounded-md text-sm mb-4 w-full">{data[0].category}</div>}</div>
+                <div className="flex justify-end items-center my-4">
+                  <ShareButton postUrl={`http://saltaok.com/post/${id}`} />
+                </div>
+              </div>
 
               <ImageItem src={data[0].image} alt={data[0].title} />
 
@@ -48,11 +63,6 @@ const Post = () => {
               )}
 
               <PostOthers />
-
-              <Helmet>
-                <title>SaltaOk &bull; {data[0].title}</title>
-                <meta name="description" content={data[0].text} />
-              </Helmet>
             </>
           )}
         </div>

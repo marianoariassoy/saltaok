@@ -16,7 +16,7 @@ const Layout = ({ children, home }: Props) => {
       <header className="fixed z-40 w-full bg-primary shadow-xl">
         <Header home={home} />
         <HeaderMobile />
-        <NavMobile />
+        <NavMobile home={home} />
       </header>
       <main className="mt-40">
         <Banner />

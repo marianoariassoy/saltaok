@@ -1,9 +1,5 @@
 const BannerContact = () => {
-  return (
-    <section className="flex justify-center md:justify-end">
-      <div className="h-96 w-64 bg-gray-400 text-gray-500 flex items-center justify-center"> Banner </div>
-    </section>
-  );
+  return <div className="h-96 w-full bg-gray-400 text-gray-500 flex items-center justify-center"> Banner </div>;
 };
 
 export default BannerContact;
