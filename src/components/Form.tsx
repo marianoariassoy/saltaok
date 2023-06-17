@@ -23,14 +23,14 @@ const Form = () => {
   const onSubmit = (data: DataContact) => {
     setSending(true);
     const sender = {
-      to: " ",
-      from: "no-reply@thk-avalos.com",
+      to: "saltaokmail@gmail.co",
+      from: "no-reply@saltaok.com",
       from_name: "Salta OK",
       subject: "Contacto",
     };
 
     axios
-      .post("https://thk-avalos.com/backend/send-email.php", { ...data, ...sender })
+      .post("http://saltaok.com/backend/send-email.php", { ...data, ...sender })
       .then((data) => {
         if (data.data === "success") {
           setSended(true);
