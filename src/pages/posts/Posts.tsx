@@ -10,8 +10,9 @@ const Posts = () => {
 
   return (
     <Layout home={false}>
+      <Banner image="banner3.jpg" />
       <Post />
-      <Banner />
+      <Banner image="banner4.jpg" />
     </Layout>
   );
 };

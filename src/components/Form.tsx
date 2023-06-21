@@ -52,7 +52,7 @@ const Form = () => {
       email: "E-Mail",
       message: "Mensaje",
       send: "Contactanos",
-      thanks: "Gracias por contactarte con nosotros.",
+      thanks: "Gracias por contactarte con nosotros, te responderemos a la brevedad.",
       error: "Se produjo un error al enviar el mensaje :-(",
     },
   };

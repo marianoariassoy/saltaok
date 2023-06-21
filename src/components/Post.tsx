@@ -20,8 +20,8 @@ const Post = () => {
 
   return (
     <section>
-      <div className="container max-w-6xl m-auto px-8 pt-12 gap-6 text-black md:flex">
-        <div className="md:w-8/12">
+      <div className="container max-w-7xl m-auto px-8 pt-12 gap-6 text-black md:flex">
+        <div className="md:w-3/4">
           {loading && <Loader />}
           {data && (
             <>
@@ -67,7 +67,7 @@ const Post = () => {
           )}
         </div>
 
-        <aside className="md:w-1/3">
+        <aside className="md:w-1/4">
           <ViralesPost />
         </aside>
       </div>

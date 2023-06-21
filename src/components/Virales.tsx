@@ -22,8 +22,8 @@ const Virales = () => {
         <h1 className="text-2xl mb-14 font-bold">virales</h1>
         <div className="md:flex gap-4">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:w-3/4 mb-8">{loading ? <Loader /> : data && data.map((item) => <ArticleVirales key={item.id} id={item.id} title={item.title} image={item.image} />)}</div>
-          <div className="md:w-1/4 md:pl-2">
-            <div className="bg-gray-400 flex items-center justify-center w-full aspect-square text-gray-500 ">banner</div>
+          <div className="md:w-1/4 md:pl-2 h-64">
+            <img src="http://saltaok.com/backend/images/banner5.jpg" alt="Banner" />
           </div>
         </div>
       </div>

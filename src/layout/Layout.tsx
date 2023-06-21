@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import HeaderMobile from "../components/HeaderMobile";
 import NavMobile from "../components/NavMobile";
 import Contact from "../components/Contact";
-import Banner from "../components/Banner";
 
 type Props = {
   children: React.ReactNode;
@@ -19,7 +18,6 @@ const Layout = ({ children, home }: Props) => {
         <NavMobile home={home} />
       </header>
       <main className="mt-40">
-        <Banner />
         {children}
         <Contact />
       </main>

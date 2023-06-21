@@ -17,9 +17,11 @@ const ViralesPost = () => {
   const { data, loading } = useFetch(`/virales`) as Props;
 
   return (
-    <section className="bg-black p-8 text-white shadow-xl">
+    <section className="bg-black py-8 px-4 text-white shadow-xl">
       <h1 className="mb-8 font-bold">virales</h1>
-      <div className="bg-gray-400 flex items-center justify-center w-full aspect-square text-gray-500 mb-8">banner</div>
+      <div className="mb-8">
+        <img src="http://saltaok.com/backend/images/banner6.jpg" className="w-full" alt="Banner" />
+      </div>
 
       <div className="grid gap-4">{loading ? <Loader /> : data && data.slice(0, 6).map((item) => <ArticleVirales key={item.id} id={item.id} title={item.title} image={item.image} />)}</div>
     </section>
