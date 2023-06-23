@@ -1,5 +1,6 @@
 import Form from "./Form";
 import Logo from "./LogoFooter";
+import BannerVertical from "./BannerVertical";
 
 const Contact = () => {
   return (
@@ -16,7 +17,7 @@ const Contact = () => {
           <Form />
         </div>
         <div className="md:pl-6">
-          <img src="http://saltaok.com/backend/images/banner6.jpg" alt="Banner" />
+          <BannerVertical number={5} />
         </div>
       </div>
     </section>

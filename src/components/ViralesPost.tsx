@@ -1,6 +1,7 @@
 import ArticleVirales from "./ArticleVirales";
 import Loader from "./Loader";
 import useFetch from "../hooks/useFetch";
+import BannerVertical from "./BannerVertical";
 
 interface Article {
   id: number;
@@ -20,10 +21,9 @@ const ViralesPost = () => {
     <section className="bg-black py-8 px-4 text-white shadow-xl">
       <h1 className="mb-8 font-bold">virales</h1>
       <div className="mb-8">
-        <img src="http://saltaok.com/backend/images/banner6.jpg" className="w-full" alt="Banner" />
+        <BannerVertical number={4} />
       </div>
-
-      <div className="grid gap-4">{loading ? <Loader /> : data && data.slice(0, 6).map((item) => <ArticleVirales key={item.id} id={item.id} title={item.title} image={item.image} />)}</div>
+      <div className="grid gap-4">{loading ? <Loader /> : data && data.slice(0, 7).map((item) => <ArticleVirales key={item.id} id={item.id} title={item.title} image={item.image} />)}</div>
     </section>
   );
 };

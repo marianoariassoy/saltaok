@@ -7,9 +7,9 @@ import { Helmet } from "react-helmet";
 const Home = () => {
   return (
     <Layout home={true}>
-      <Banner image="banner1.jpg" />
+      <Banner number={0} />
       <Posts />
-      <Banner image="banner2.jpg" />
+      <Banner number={1} />
       <Virales />
       <Helmet>
         <title>SaltaOK Comunidad. Contamos historias</title>

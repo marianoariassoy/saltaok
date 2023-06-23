@@ -20,7 +20,7 @@ const PostOthers = () => {
 
   return (
     <section className="grid md:grid-cols-2 gap-8 border-t border-b py-12">
-      {loading ? <Loader /> : data && data.slice(0, 4).map((item) => <PostOthersItem key={item.id} id={item.id} section={item.category} title={item.title} date={item.date} image={item.image} />)}
+      {loading ? <Loader /> : data && data.slice(0, 6).map((item) => <PostOthersItem key={item.id} id={item.id} section={item.category} title={item.title} date={item.date} image={item.image} />)}
     </section>
   );
 };
