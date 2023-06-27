@@ -8,7 +8,7 @@ type ImageComponentProps = {
 
 const ImageItem = ({ src, alt }: ImageComponentProps) => {
   const [isLoading, setIsLoading] = useState(true);
-  const url = "http://saltaok.com/backend/images/";
+  const url = "https://saltaok.com/backend/images/";
 
   useEffect(() => {
     const image = new Image();
